@@ -56,7 +56,7 @@ class PostsController @Inject()(
     * TODO: If the post does not exist, returns a 404 with a json like
     *
     * {
-    *   "status": "404",
+    *   "status": 404,
     *   "message": "Post not found"
     * }
     *

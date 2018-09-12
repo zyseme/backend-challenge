@@ -49,7 +49,7 @@ We need an API with which we can mange the posts for our blog. A post consist of
  - Returning a single entity:
  ```
  {
-   "status": "200",          // Same as HTTP Status
+   "status": 200,          // Same as HTTP Status
    "data": {
      "id": 123,
      "title": "My Post-Title",
@@ -60,7 +60,7 @@ We need an API with which we can mange the posts for our blog. A post consist of
  - Returning multiple entities:
  ```
  {
-   "status": "200",          
+   "status": 200,          
    "data": [
      {"id": 123,"title":"Title 1","body":"Body1"},
      {"id": 124,"title":"Title 2","body":"Body2"},
@@ -71,7 +71,7 @@ We need an API with which we can mange the posts for our blog. A post consist of
  - Returning an error:
  ```
  {
-   "status": "400",
+   "status": 400,
    "message": "Id is already in use"
  }
  ```
