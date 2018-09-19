@@ -1,10 +1,12 @@
 # Backend Challenge
 
-We ask candidate for backend positions to do this challenge. It is intended to give us an impression of what the candidate is capable of how they write and engineer code. 
+We ask candidate for backend positions to do this challenge. It is intended to give us an impression of what the candidate is capable of, how they write and engineer code. 
 
-Typically, after sending an application we have a phonecall with candidates after which we send them this repository. After completing the tasks candidates hand in their code. Our Backend team reviews the code and invites the candidate for a pairprogramming session during which we keep working on the code they handed in (refactoring, new functionality, debugging).
+Typically, after sending an application we have a phonecall with candidates after which we send them this repository. After completing the task candidates hand in their code. Our Backend team reviews the code and invites the candidate for a pairprogramming session during which we keep working on the code they handed in (refactoring, new functionality, debugging).
 
 The challenge starts with a scala project using the play framework. It is meant to be also used by developers new to the language, we will not expect every candidate to write the most advanced scala. However a candidate should show, that they manage to deal with scala and an existing codebase.
+
+If the candidate runs into problems or questions they can not resolve themself, we encourage them to ask us.
 
 ## How to run the project
 
