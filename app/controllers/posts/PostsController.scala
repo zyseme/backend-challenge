@@ -30,7 +30,7 @@ class PostsController @Inject()(
     postResult.fold(
       errors => {
         Future.successful {
-          BadRequest(Json.obj("status" ->"400", "message" -> JsError.toJson(errors)))
+          BadRequest(Json.obj("message" -> JsError.toJson(errors)))
         }
       },
       post => {

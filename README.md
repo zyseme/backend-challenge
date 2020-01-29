@@ -20,7 +20,7 @@ The project does not require any further infrastructure or setup and it should s
 
 ## What is in the project right now
 
-The project contains the first REST-API-endpoints for a blog. The famous /posts example. The situation is, that a memeber of your team was supposed to built this API but got sick and you have to take over. The API shall only support JSON. The following requirements are given:
+The project contains the first REST-API-endpoints for a blog. The famous /posts example. The situation is, that a member of your team was supposed to built this API but got sick and you have to take over. The API shall only support JSON. The following requirements are given:
 
 You can send requests for example with a tool like [httpie](https://httpie.org/):
 
@@ -29,13 +29,17 @@ You can send requests for example with a tool like [httpie](https://httpie.org/)
 
 ## The task
 
-We need an API with which we can mange the posts for our blog. A post consist of an id (Integer), title (String) and body (String). We need CRUD operations on this ressource with the following endpoints:
+1.
+We need an API with which we can mange the posts for our blog. A post consist of an id (Integer), title (String) and body (String). We need CRUD operations on this resource with the following endpoints:
 
  - `GET     api/v1/posts      // Returns all blog posts`
  - `POST    api/v1/posts      // Create a new blog post`
  - `GET     api/v1/posts/:id  // Returns the blog post with the given id`
  - `PUT     api/v1/posts/:id  // Updates the blog post with the given id`
  - `DELETE  api/v1/posts/:id  // Deletes the blog post with the given id`
+
+2.
+We want to implement the Like Feature; We should store the number of likes for every post and return it with the read requests. Please design and implement the feature and describe your approach with a comment.
 
  When sending data to the api, it should be in the following format:
 
@@ -51,21 +55,20 @@ We need an API with which we can mange the posts for our blog. A post consist of
  - Returning a single entity:
  ```
  {
-   "status": 200,          // Same as HTTP Status
    "data": {
      "id": 123,
      "title": "My Post-Title",
-     "body": "My Post-Body"
+     "body": "My Post-Body",
+     "likes": 20
    }
  }
  ```
  - Returning multiple entities:
  ```
  {
-   "status": 200,          
    "data": [
-     {"id": 123,"title":"Title 1","body":"Body1"},
-     {"id": 124,"title":"Title 2","body":"Body2"},
+     {"id": 123,"title":"Title 1","body":"Body1","likes": 20},
+     {"id": 124,"title":"Title 2","body":"Body2","likes": 10},
      ...
      ]
  }
@@ -73,11 +76,10 @@ We need an API with which we can mange the posts for our blog. A post consist of
  - Returning an error:
  ```
  {
-   "status": 400,
    "message": "Id is already in use"
  }
  ```
 
- Please implement the endpoints. The posts can be stored in the memory, so it is ok to loose them when the app goes down (no real persistence necessary).
-
- Once done, you may either open a PR or zip the whole project and sent it to us via email.
+ The posts and likes can be stored in the memory, so it is ok to loose them when the app goes down (no real persistence necessary).
+ Please implement the endpoints and the like feature, we also expect you to improve the existing code.
+ Once done, please send us the whole project via email.
